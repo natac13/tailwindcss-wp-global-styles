@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-wp-faust",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A TailwindCSS Plugin to take global styles generated from Faust.js and convert them to Tailwind",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -8,6 +8,7 @@
     "./index.js",
     "./index.d.ts"
   ],
+  "repository": "https://github.com/natac13/tailwindcss-wp-faust",
   "keywords": [
     "tailwindcss",
     "faust",
