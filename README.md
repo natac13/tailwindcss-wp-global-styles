@@ -25,12 +25,12 @@ module.exports = {
 }
 ```
 
-## Options
+## ⛭ Options
 
 The `globalStyles` option is required. It should be the contents of the generated Faust.js global stylesheet.
-
-## Made by [natac13](https://github.com/natac13)
 
 ## 🪪 License
 
 MIT
+
+**Made by [natac13](https://github.com/natac13)**
