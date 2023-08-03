@@ -1,0 +1,60 @@
+{
+  "name": "tailwindcss-wp-faust",
+  "version": "0.0.2",
+  "description": "A TailwindCSS Plugin to take global styles generated from Faust.js and convert them to Tailwind",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "./index.js",
+    "./index.d.ts"
+  ],
+  "keywords": [
+    "tailwindcss",
+    "faust",
+    "faustjs",
+    "css",
+    "postcss",
+    "tailwind",
+    "tailwindcss-plugin"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write ."
+  },
+  "author": "Sean Campbell <sean.campbell13@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "useTabs": true,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.json",
+        "options": {
+          "useTabs": false
+        }
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/css": "^0.0.33",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "prettier": "^3.0.1",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "css": "^3.0.0"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.0.0 || insiders"
+  }
+}

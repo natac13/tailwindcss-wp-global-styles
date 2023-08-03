@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "allowJs": true,
+    "checkJs": true,
+    "moduleResolution": "NodeNext",
+    "target": "es2022",
+    "outDir": "dist",
+    "types": ["./index.d.ts"]
+  },
+  "include": ["./index.js"]
+}
