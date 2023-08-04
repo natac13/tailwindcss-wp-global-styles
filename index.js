@@ -175,14 +175,6 @@ module.exports = plugin.withOptions(
 			addBase({
 				body: cssVariables,
 			})
-
-			// TODO: see why you think this exists else where
-			// add component that is used but I cannot find it in the css
-			addComponents({
-				'.has-text-align-center': {
-					textAlign: 'center',
-				},
-			})
 		}
 	},
 	() => {

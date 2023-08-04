@@ -1,18 +1,18 @@
 {
-  "name": "tailwindcss-wp-faust",
-  "version": "0.0.4",
-  "description": "A TailwindCSS Plugin to take global styles generated from Faust.js and convert them to Tailwind",
+  "name": "tailwindcss-wp-global-styles",
+  "version": "0.1.0",
+  "description": "A TailwindCSS Plugin to take global styles from WordPress and convert them to TailwindCSS",
   "main": "./index.js",
   "types": "./index.d.ts",
   "files": [
     "./index.js",
     "./index.d.ts"
   ],
-  "repository": "https://github.com/natac13/tailwindcss-wp-faust",
+  "repository": "https://github.com/natac13/tailwindcss-wp-global-styles",
   "keywords": [
     "tailwindcss",
-    "faust",
-    "faustjs",
+    "wordpress",
+    "headless",
     "css",
     "postcss",
     "tailwind",
