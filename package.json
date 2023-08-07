@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-wp-global-styles",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A TailwindCSS Plugin to take global styles from WordPress and convert them to TailwindCSS",
   "main": "./index.js",
   "types": "./index.d.ts",
