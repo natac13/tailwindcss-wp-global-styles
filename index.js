@@ -85,7 +85,8 @@ module.exports = plugin.withOptions(
 						}
 
 						if (property.startsWith('--')) {
-							cssVariables[property] = value.replace(' !important', '')
+							// cssVariables[property] = value.replace(' !important', '')
+							cssVariables[property] = value
 						}
 					}
 					continue
@@ -102,7 +103,8 @@ module.exports = plugin.withOptions(
 						continue
 					}
 					const property = declaration.property
-					const value = declaration.value?.replace(' !important', '')
+					// const value = declaration.value?.replace(' !important', '')
+					const value = declaration.value
 
 					if (!property || !value) {
 						continue
@@ -135,7 +137,8 @@ module.exports = plugin.withOptions(
 							continue
 						}
 						const property = declaration.property
-						const value = declaration.value?.replace(' !important', '')
+						// const value = declaration.value?.replace(' !important', '')
+						const value = declaration.value
 
 						if (!property || !value) {
 							continue

@@ -29,6 +29,10 @@ module.exports = {
 
 The `globalStyles` option is required. It should be the contents of the WordPress global stylesheet.
 
+## ⚠️ Warning
+
+Any `!important` declarations in the WordPress global stylesheet will be preserved in the TailwindCSS base and components. Therefore, you should keep this in mind when writing your own TailwindCSS styles. And to check the TailwindCSS Intellisense to see when `!important` is being used.
+
 ## 🪪 License
 
 MIT
