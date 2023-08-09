@@ -14,10 +14,11 @@ npm install tailwindcss-wp-global-styles
 
 ## 📦 Usage
 
-Add the plugin to your `tailwind.config.js` file:
+Add the plugin to your `tailwind.config.js` file. This will include a `safelist` of the WP global stylesheet selectors:
 
 ```js
 // tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 module.exports = {
 	plugins: [
 		require('tailwindcss-wp-global-styles')({
@@ -27,23 +28,22 @@ module.exports = {
 }
 ```
 
-If you are using your own custom `safelist` option then you will need to merge the `safelist` from this plugin with your own.
+If you are using your own custom `safelist` option then you will need to merge the `safelist` from this plugin with your own. We provide a helper function to get the `safelist` from the WordPress global stylesheet. You can use it like this:
 
 ```js
-const getWPSafelist = require('tailwindcss-wp-global-styles/utils').getWPSafelist
+const plugin = require('tailwindcss-wp-global-styles')
 const globalStyles = fs.readFileSync('./path/to/wp/global.css', 'utf8')
 // tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-	purge: {
-		safelist: [
-			// Add your own safelist items here,
-			...getWPSafelist(globalStyles),
-		],
-	},
 	plugins: [
-		require('tailwindcss-wp-global-styles')({
+		plugin({
 			globalStyes,
 		}),
+	],
+	safelist: [
+		// Add your own safelist items here,
+		...plugin.getWPSafelist(globalStyles),
 	],
 }
 ```

@@ -4,6 +4,7 @@ declare function plugin(options?: { globalStyles: string }): {
 
 declare namespace plugin {
 	const __isOptionsFunction: boolean
+	function getWPSafelist(globalStyles: string): string[]
 }
 
 export = plugin

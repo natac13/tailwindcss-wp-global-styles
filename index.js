@@ -200,3 +200,5 @@ module.exports = plugin.withOptions(
 		}
 	},
 )
+
+module.exports.getWPSafelist = getWPSafelist
