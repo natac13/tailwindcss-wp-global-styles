@@ -27,6 +27,27 @@ module.exports = {
 }
 ```
 
+If you are using your own custom `safelist` option then you will need to merge the `safelist` from this plugin with your own.
+
+```js
+const getWPSafelist = require('tailwindcss-wp-global-styles/utils').getWPSafelist
+const globalStyles = fs.readFileSync('./path/to/wp/global.css', 'utf8')
+// tailwind.config.js
+module.exports = {
+	purge: {
+		safelist: [
+			// Add your own safelist items here,
+			...getWPSafelist(globalStyles),
+		],
+	},
+	plugins: [
+		require('tailwindcss-wp-global-styles')({
+			globalStyes,
+		}),
+	],
+}
+```
+
 ## ⛭ Options
 
 The `globalStyles` option is required. It should be the contents of the WordPress global stylesheet.

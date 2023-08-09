@@ -1349,12 +1349,6 @@ body {
   line-height: 1.4;
 }
 
-/* purgecss end ignore */
-
-.table {
-  display: table;
-}
-
 .has-black-color {
   color: var(--wp--preset--color--black) !important;
 }
@@ -2113,6 +2107,28 @@ body {
 
 .has-source-sans-pro-font-family {
   font-family: var(--wp--preset--font-family--source-sans-pro) !important;
+}
+
+/* purgecss end ignore */
+
+.table {
+  display: table;
+}
+
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.gap-0 {
+  gap: 0px;
 }
 
 :root {
