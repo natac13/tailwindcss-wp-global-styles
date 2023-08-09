@@ -4,6 +4,8 @@ This plugin takes the CSS contents of the global stylesheet from WordPress and a
 
 You will have access to all the utility classes from the WordPress Global Stylesheet in your TailwindCSS build. As well as the css variables.
 
+The goal of this plugin is to provide you with TailwindCSS intelisense for the WordPress global stylesheet. However, to ensure all the WP blocks have the correct styles, and to avoid having to include the `globalStylesheet.css` in the build, this plugin will add all the selectors to the `safelist` config option. This makes sure that all the selectors are included in the build.
+
 ## 🚀 Installation
 
 ```bash
