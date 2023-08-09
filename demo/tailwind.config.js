@@ -10,7 +10,7 @@ module.exports = {
 	],
 	theme: {},
 	plugins: [
-		require('tailwindcss-wp-faust')({
+		require('tailwindcss-wp-global-styles')({
 			globalStyles: fs.readFileSync(path.resolve(__dirname, './globalStylesheet.css'), 'utf8'),
 		}),
 	],

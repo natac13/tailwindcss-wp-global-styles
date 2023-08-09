@@ -25,7 +25,7 @@ function convertKebabToCamel(kebab) {
 
 module.exports = plugin.withOptions(
 	({ globalStyles }) => {
-		return function ({ addComponents, addBase }) {
+		return function ({ addComponents, addBase, addUtilities }) {
 			if (!globalStyles) {
 				console.error('🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨')
 				console.error('No globalStyles passed to tailwind config')
@@ -180,9 +180,47 @@ module.exports = plugin.withOptions(
 			})
 		}
 	},
-	() => {
+	({ globalStyles }) => {
+		/**
+		 * @type {string[]}
+		 */
+		const safelistSelectors = []
+
+		// console.log(globalStyles)
+		if (!globalStyles) {
+			return {}
+		}
+
+		const ast = css.parse(globalStyles)
+
+		const rules = ast?.stylesheet?.rules
+
+		if (!rules) {
+			return {}
+		}
+
+		for (let i = 0; i < rules.length; i++) {
+			const rule = rules[i]
+
+			// skip non rules
+			if (!rule || !('selectors' in rule) || !('declarations' in rule)) {
+				continue
+			}
+
+			const selectors = rule.selectors
+			const declarations = rule.declarations
+
+			if (!selectors || !declarations) {
+				continue
+			}
+
+			for (const selector of selectors) {
+				safelistSelectors.push(selector)
+			}
+		}
 		return {
 			theme: {},
+			safelist: safelistSelectors,
 		}
 	},
 )
